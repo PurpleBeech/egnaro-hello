@@ -5,6 +5,7 @@
 	<groupId>ca.egnaro</groupId>
 	<artifactId>egnaro-hello</artifactId>
 	<version>0.1-SNAPSHOT</version>
+	<inceptionYear>2021</inceptionYear>
 	<build>
 		<plugins>
 			<plugin>
