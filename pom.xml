@@ -6,7 +6,7 @@
 	<artifactId>egnaro-hello</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<inceptionYear>2021</inceptionYear>
-	<description>A hello world app:)</description>
+	<description>A Hello World app:)</description>
 	<distributionManagement>
 		<site>
 			<id>site_id</id>
