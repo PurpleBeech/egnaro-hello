@@ -6,6 +6,20 @@
 	<artifactId>egnaro-hello</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<inceptionYear>2021</inceptionYear>
+	<description>A hello world app:)</description>
+	<distributionManagement>
+		<site>
+			<id>site_id</id>
+			<url>scm:git:https://github.com/PurpleBeech/egnaro-hello.git</url>
+		</site>
+	</distributionManagement>
+	<properties>
+		<scm-publish.scmBranch>gh-pages</scm-publish.scmBranch>
+<scm-publish.pubScmUrl>scm:git:https://github.com/PurpleBeech/egnaro-hello.git</scm-publish.pubScmUrl>
+
+<!-- Location of where "site" documentation is output; This is for -->
+<scm-publish.siteDocOuputDirectory>${project.build.directory}/site</scm-publish.siteDocOuputDirectory>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -16,6 +30,22 @@
 					<verbose>true</verbose>
 					<fork>true</fork>
 					<compilerVersion>11</compilerVersion>
+				</configuration>
+			</plugin>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.9.1</version>
+					<configuration>
+						<attach>true</attach>
+					</configuration>
+				</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<scmBranch>gh-pages</scmBranch>
 				</configuration>
 			</plugin>
 		</plugins>
